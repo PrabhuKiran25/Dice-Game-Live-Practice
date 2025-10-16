@@ -58,8 +58,17 @@ const updateScore = (player, score, playerScore) => {
   const currentScore = playerScore.innerText;
   const totalScore = Number(currentScore) + score;
   playerScore.innerText = totalScore;
+  checkGameOver(totalScore, player);
 };
 
 // Winning Condition
+
+const checkGameOver = (totalScore, player) => {
+  if (totalScore >= 20) {
+    player1Button.disabled = true;
+    player2Button.disabled = true;
+    playerMove.innerText = `${player} Wins 🎊`;
+  }
+};
 
 // Resetting the game
