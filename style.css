@@ -50,6 +50,10 @@
   border: none;
   cursor: pointer;
 }
+.player button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
 .dice {
   color: green;
   font-size: 40px;
