@@ -72,3 +72,10 @@ const checkGameOver = (totalScore, player) => {
 };
 
 // Resetting the game
+
+const handleReset = () => {
+  player1Score.innerText = 0;
+  player2Score.innerText = 0;
+  dice.src = "assets/1.png";
+  handleStart();
+};
