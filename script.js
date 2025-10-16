@@ -33,7 +33,32 @@ const updateMoves = (player) => {
 
 // Dice Roll Logic
 
+const handleDiceRoll = (player) => {
+  // Adding and Removing the classname for rolling dice animation
+  dice.classList.add("rotate");
+
+  // Using setTimeout function to wait for dice rolling and updating the value
+  setTimeout(() => {
+    dice.classList.remove("rotate");
+    const score = Math.floor(Math.random() * 6 + 1);
+    dice.src = `assets/${score}.png`;
+    if (player === "Player-1") {
+      updateMoves("Player-2");
+      updateScore(player, score, player1Score);
+    } else {
+      updateMoves("Player-1");
+      updateScore(player, score, player2Score);
+    }
+  }, 1000);
+};
+
 // Update Score Logic
+
+const updateScore = (player, score, playerScore) => {
+  const currentScore = playerScore.innerText;
+  const totalScore = Number(currentScore) + score;
+  playerScore.innerText = totalScore;
+};
 
 // Winning Condition
 

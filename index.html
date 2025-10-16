@@ -28,7 +28,13 @@
         <div class="player">
           <h3>Player-1</h3>
           <h1 id="player1-score">0</h1>
-          <button type="button" id="player1-button">Roll Now</button>
+          <button
+            type="button"
+            id="player1-button"
+            onclick="handleDiceRoll('Player-1')"
+          >
+            Roll Now
+          </button>
         </div>
         <div class="dice">
           <img src="assets/1.png" alt="dice" id="dice" />
@@ -36,7 +42,13 @@
         <div class="player">
           <h3>Player-2</h3>
           <h1 id="player2-score">0</h1>
-          <button type="button" id="player2-button">Roll Now</button>
+          <button
+            type="button"
+            id="player2-button"
+            onclick="handleDiceRoll('Player-2')"
+          >
+            Roll Now
+          </button>
         </div>
       </div>
       <div class="reset">
